@@ -4,25 +4,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <style>
+    @font-face {
+      font-family: figtree-extrabold;
+      src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
+    }
+  
+    @font-face {
+      font-family: figtree-semibold;
+      src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
+    }
+  </style>
 
   <title>Frontend Mentor | Blog preview card</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryYellow: '#F4D04E',
+            textGrey: '#7F7F7F',
+          },
+        },
+        container: {
+          center: true,
+        },
+      }
+    }
+  </script>
 </head>
 
-<body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-
+<body class="bg-primaryYellow container flex justify-center items-center h-screen w-screen">
+  <main
+    class="bg-white w-80 flex border-[1px] border-black rounded-[20px] flex p-6 lg:shadow-[16px_16px] min-[320px]:shadow-[8px_8px] shadow-black flex-col">
+    <img src="./assets/images/illustration-article.svg" class="rounded-[10px]" alt="learning" />
+    <div class="container my-6">
+      <div
+        class="w-[73px] bg-primaryYellow text-black mb-1.5 px-3 py-1 font-['figtree-extrabold'] text-xs rounded leading-[18px]">
+        Learning
+      </div>
+      <p class="my-1.5 font-['figtree-semibold'] text-xs leading-[18px]">Published 21 Dec 2023</p>
+      <h1 class="my-1.5 hover:text-primaryYellow cursor-pointer font-['figtree-extrabold'] text-xl leading-[30px]">HTML & CSS
+        foundations
+      </h1>
+      <p class="my-1.5 text-textGrey font-['figtree-semibold'] text-sm leading-[21px]">These languages are the backbone of
+        every website,
+        defining
+        structure, content, and
+        presentation.</p>
+      </div>
+      <div class="container">
+        <div class="flex items-center">
+          <img class="w-8" alt="user" src="./assets/images/image-avatar.webp" />
+          <p class="ml-3 text-sm font-['figtree-extrabold'] leading-[21px]">Greg Cooper</p>
+        </div>
+      </div>
+      </main>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
